@@ -1,0 +1,43 @@
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <div class="brand">
+        <div class="flag-stripes">
+          <div class="stripe red"></div>
+          <div class="stripe white"></div>
+          <div class="stripe green"></div>
+        </div>
+        <div class="brand-info">
+          <h1 class="brand-title">Consulat du Sultanat d'Oman</h1>
+          <p class="brand-subtitle">République de Côte d'Ivoire - Abidjan</p>
+        </div>
+      </div>
+      
+      <nav class="nav" [class.active]="isMenuOpen">
+        <button class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a routerLink="/" routerLinkActive="active" (click)="closeMenu()">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/consulat" routerLinkActive="active" (click)="closeMenu()">Le Consulat</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/services" routerLinkActive="active" (click)="closeMenu()">Services consulaires</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/missions" routerLinkActive="active" (click)="closeMenu()">Missions</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

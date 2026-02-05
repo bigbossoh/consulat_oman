@@ -1,0 +1,316 @@
+.main-content {
+  flex: 1;
+}
+
+/* Page Hero */
+.page-hero {
+  background: linear-gradient(135deg, #1F2937 0%, #374151 100%);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin: 0 0 1rem 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.page-hero p {
+  font-size: 1.25rem;
+  margin: 0;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* Objectives Section */
+.objectives-section {
+  background-color: #ffffff;
+  padding: 4rem 0;
+}
+
+.objectives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.objective-card {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.objective-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  border-color: #C8102E;
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.political-icon { background-color: #1F2937; }
+.economic-icon { background-color: #C9A227; }
+.cultural-icon { background-color: #007A3D; }
+.scientific-icon { background-color: #C8102E; }
+
+.objective-card h3 {
+  font-family: 'Playfair Display', serif;
+  color: #1F2937;
+  font-size: 1.25rem;
+  margin: 0 0 1rem 0;
+}
+
+.objective-card p {
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Partnership Section */
+.partnership-section {
+  background-color: #F5F7FA;
+  padding: 4rem 0;
+}
+
+.partnership-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.partnership-text h3 {
+  font-family: 'Playfair Display', serif;
+  color: #1F2937;
+  font-size: 1.5rem;
+  margin: 0 0 1.5rem 0;
+}
+
+.partnership-text p {
+  color: #6b7280;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.sectors-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sectors-list li {
+  background: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid #C8102E;
+  color: #374151;
+}
+
+.sectors-list li strong {
+  color: #1F2937;
+}
+
+.partnership-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.oman-landscape-gallery {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.gallery-main {
+  width: 100%;
+  height: 250px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery-main:hover {
+  transform: scale(1.02);
+}
+
+.gallery-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 80px;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+}
+
+/* Investment Section */
+.investment-section {
+  background-color: #ffffff;
+  padding: 4rem 0;
+}
+
+.investment-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.investment-card {
+  background: linear-gradient(135deg, #f9fafb 0%, #e5e7eb 100%);
+  padding: 3rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.landscape-carousel {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.investment-visuals {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.investment-image {
+  width: 100%;
+  height: 250px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.investment-image:hover {
+  transform: scale(1.02);
+}
+
+.investment-stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.stat-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #C8102E;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1F2937;
+  font-family: 'Playfair Display', serif;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+}
+
+.investment-card h3 {
+  font-family: 'Playfair Display', serif;
+  color: #1F2937;
+  font-size: 1.5rem;
+  margin: 0 0 2rem 0;
+}
+
+.investment-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  text-align: left;
+}
+
+.investment-benefits li {
+  background: white;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  color: #374151;
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.investment-benefits li::before {
+  content: '✓';
+  position: absolute;
+  left: 1rem;
+  color: #007A3D;
+  font-weight: bold;
+}
+
+.investment-benefits li strong {
+  color: #1F2937;
+}
+
+.investment-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .page-hero p {
+    font-size: 1rem;
+  }
+  
+  .partnership-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .investment-benefits {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

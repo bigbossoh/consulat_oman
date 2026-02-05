@@ -1,0 +1,100 @@
+<main class="main-content">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-background">
+      <app-image-carousel 
+        [images]="heroImages" 
+        [autoPlay]="true" 
+        [interval]="4000" 
+        [showCaptions]="false" 
+        [height]="'100%'"
+        class="hero-background-carousel">
+      </app-image-carousel>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">Bienvenue au Consulat du Sultanat d'Oman</h1>
+          <p class="hero-subtitle">Service, Diplomatie et Excellence</p>
+          <div class="hero-actions">
+            <a href="/services" class="btn-primary">Services consulaires</a>
+            <a href="/contact" class="btn-secondary">Contactez-nous</a>
+          </div>
+        </div>
+        <div class="hero-flags">
+          <img src="assets/images/drapeau-oman.png" alt="Drapeau du Sultanat d'Oman" class="flag flag-oman">
+          <img src="assets/images/drapeau-cote-d-ivoire.jpg" alt="Drapeau de Côte d'Ivoire" class="flag flag-ivory-coast">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Message du Chef de Mission -->
+  <section class="message-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Message du Chef de Mission</h2>
+        <div class="divider"></div>
+      </div>
+      
+      <div class="message-content">
+        <div class="message-card">
+          <div class="message-avatar">
+            <img src="assets/images/David-Billon.webp" alt="M. David Billon, Consul du Sultanat d'Oman" class="consul-photo-large">
+          </div>
+          <div class="message-text">
+            <blockquote>
+              Cher visiteur,<br><br>
+              J'ai le plaisir de vous souhaiter la bienvenue sur le site officiel du Consulat du Sultanat d'Oman en République de Côte d'Ivoire, basé à Abidjan.<br><br>
+              Le Consulat du Sultanat d'Oman œuvre, en étroite collaboration avec le Ministère des Affaires étrangères, au renforcement des relations de coopération et à la consolidation des liens d'amitié entre le Sultanat d'Oman et la République de Côte d'Ivoire.<br><br>
+              Ce site a pour vocation de fournir des informations sur les relations bilatérales entre nos deux pays, de faciliter la communication avec le Consulat et de présenter les services consulaires mis à la disposition du public.<br><br>
+              Nous sommes honorés de vous servir et vous souhaitons une excellente visite.
+            </blockquote>
+            <div class="message-author">
+              <strong>M. David Billon</strong><br>
+              <span>Consul du Sultanat d'Oman</span><br>
+              <span>République de Côte d'Ivoire – Abidjan</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Links -->
+  <section class="quick-links">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Nos Services</h2>
+        <div class="divider"></div>
+      </div>
+      
+      <div class="links-grid">
+        <a href="/services" class="link-card">
+          <div class="card-icon visa"></div>
+          <h3>Demande de visa</h3>
+          <p>Procédure et documents nécessaires pour obtenir un visa pour le Sultanat d'Oman</p>
+        </a>
+        
+        <a href="/services" class="link-card">
+          <div class="card-icon passport"></div>
+          <h3>Perte de passeport</h3>
+          <p>Assistance et démarches en cas de perte ou de vol de passeport</p>
+        </a>
+        
+        <a href="/services" class="link-card">
+          <div class="card-icon assistance"></div>
+          <h3>Assistance d'urgence</h3>
+          <p>Aide consulaire pour les citoyens omanais en difficulté</p>
+        </a>
+        
+        <a href="/missions" class="link-card">
+          <div class="card-icon business"></div>
+          <h3>Opportunités d'affaires</h3>
+          <p>Informations sur les opportunités d'investissement au Sultanat d'Oman</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>

@@ -1,0 +1,72 @@
+<main class="main-content">
+  <section class="page-hero">
+    <div class="container">
+      <h1>Contact</h1>
+      <p>Nous sommes à votre écoute</p>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Contactez-nous</h2>
+        <div class="divider"></div>
+      </div>
+      
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="info-card">
+            <div class="info-icon location-icon"></div>
+            <h3>Adresse</h3>
+            <p>Consulat du Sultanat d'Oman<br>Abidjan, Côte d'Ivoire</p>
+          </div>
+          
+          <div class="info-card">
+            <div class="info-icon phone-icon"></div>
+            <h3>Téléphone</h3>
+            <p>+225 XX XX XX XX</p>
+            <p>Urgences: +225 XX XX XX XX</p>
+          </div>
+          
+          <div class="info-card">
+            <div class="info-icon email-icon"></div>
+            <h3>Email</h3>
+            <p>consulat@oman.ci</p>
+            <p>urgence@oman.ci</p>
+          </div>
+          
+          <div class="info-card">
+            <div class="info-icon hours-icon"></div>
+            <h3>Horaires</h3>
+            <p>Lundi - Jeudi: 08h00 - 16h00</p>
+            <p>Vendredi: 08h00 - 14h00</p>
+            <p>Samedi - Dimanche: Fermé</p>
+          </div>
+        </div>
+        
+        <div class="contact-form-container">
+          <app-contact-form (formSubmit)="onSubmitForm($event)"></app-contact-form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="map-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Nous trouver</h2>
+        <div class="divider"></div>
+      </div>
+      
+      <div class="map-container">
+        <div class="map-placeholder">
+          <div class="map-content">
+            <h3>Localisation</h3>
+            <p>Consulat du Sultanat d'Oman<br>Abidjan, Côte d'Ivoire</p>
+            <p>Nous sommes situés dans le centre-ville d'Abidjan, facilement accessible par les transports en commun.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

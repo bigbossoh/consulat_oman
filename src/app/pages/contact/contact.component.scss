@@ -1,0 +1,152 @@
+.main-content {
+  flex: 1;
+}
+
+/* Page Hero */
+.page-hero {
+  background: linear-gradient(135deg, #C8102E 0%, #007A3D 100%);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin: 0 0 1rem 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.page-hero p {
+  font-size: 1.25rem;
+  margin: 0;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: #ffffff;
+  padding: 4rem 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.info-card {
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  border-color: #C8102E;
+}
+
+.info-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.25rem;
+  position: relative;
+  z-index: 1;
+}
+
+.location-icon { background-color: #1F2937; }
+.phone-icon { background-color: #007A3D; }
+.email-icon { background-color: #C9A227; }
+.hours-icon { background-color: #C8102E; }
+
+.info-card h3 {
+  font-family: 'Playfair Display', serif;
+  color: #1F2937;
+  font-size: 1.25rem;
+  margin: 0 0 1rem 0;
+}
+
+.info-card p {
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0.5rem 0;
+}
+
+.contact-form-container {
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Map Section */
+.map-section {
+  background-color: #F5F7FA;
+  padding: 4rem 0;
+}
+
+.map-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.map-placeholder {
+  background: white;
+  border-radius: 12px;
+  padding: 3rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.map-content h3 {
+  font-family: 'Playfair Display', serif;
+  color: #1F2937;
+  font-size: 1.5rem;
+  margin: 0 0 1rem 0;
+}
+
+.map-content p {
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0.5rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .page-hero p {
+    font-size: 1rem;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .map-placeholder {
+    padding: 2rem;
+  }
+}

@@ -25,22 +25,34 @@
 .brand {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
-.flag-stripes {
+.flags-container {
   display: flex;
-  flex-direction: column;
-  width: 30px;
-  height: 20px;
-  border: 1px solid #e5e7eb;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.stripe {
-  flex: 1;
-  &.red { background-color: #C8102E; }
-  &.white { background-color: #FFFFFF; }
-  &.green { background-color: #007A3D; }
+.flag {
+  width: 24px;
+  height: 16px;
+  border-radius: 3px;
+  border: 1px solid #e5e7eb;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.flag:hover {
+  transform: scale(1.1);
+}
+
+.flag-oman {
+  width: 28px;
+}
+
+.flag-ivory-coast {
+  width: 24px;
 }
 
 .brand-title {

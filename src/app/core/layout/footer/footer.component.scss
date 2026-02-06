@@ -1,3 +1,13 @@
+.flags-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 .footer {
   background-color: #1F2937;
   color: #ffffff;

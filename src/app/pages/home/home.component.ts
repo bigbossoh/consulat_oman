@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+﻿import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { I18nPipe } from '../../core/i18n/i18n.pipe';
 import { ImageCarouselComponent } from '../../shared/components/image-carousel/image-carousel.component';
 
 interface CarouselImage {
   src: string;
-  alt: string;
-  caption?: string;
+  altKey: string;
+  captionKey?: string;
 }
 
 @Component({
@@ -12,34 +14,34 @@ interface CarouselImage {
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   standalone: true,
-  imports: [ImageCarouselComponent]
+  imports: [ImageCarouselComponent, I18nPipe, RouterLink]
 })
 export class HomeComponent {
   heroImages: CarouselImage[] = [
     {
       src: 'assets/images/billon_consul3.jpeg',
-      alt: 'Rencontres diplomatiques',
-      caption: 'Coopération bilatérale'
+      altKey: 'home.carousel.billon3.alt',
+      captionKey: 'home.carousel.billon3.caption'
     },
     {
       src: 'assets/images/billon_consul1.jpg',
-      alt: 'Consulat du Sultanat d\'Oman',
-      caption: 'Nos locaux consulaires'
+      altKey: 'home.carousel.billon1.alt',
+      captionKey: 'home.carousel.billon1.caption'
     },
     {
       src: 'assets/images/vue_Oman4.jpg',
-      alt: 'Montagnes d\'Oman',
-      caption: 'Paysages omanais'
+      altKey: 'home.carousel.oman4.alt',
+      captionKey: 'home.carousel.oman4.caption'
     },
     {
       src: 'assets/images/vue-abidjan1.jpg',
-      alt: 'Ville d\'Abidjan',
-      caption: 'Notre belle capitale'
+      altKey: 'home.carousel.abidjan1.alt',
+      captionKey: 'home.carousel.abidjan1.caption'
     },
     {
       src: 'assets/images/vue_Oman1.jpg',
-      alt: 'Patrimoine omanais',
-      caption: 'Architecture traditionnelle'
+      altKey: 'home.carousel.oman1.alt',
+      captionKey: 'home.carousel.oman1.caption'
     }
   ];
 }

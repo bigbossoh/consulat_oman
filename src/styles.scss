@@ -1,1 +1,297 @@
-/* You can add global styles to this file, and also import other style files */
+﻿:root {
+  --oman-red: #c8102e;
+  --oman-green: #007a3d;
+  --oman-gold: #c9a227;
+  --ink-900: #13212f;
+  --ink-700: #30465b;
+  --ink-500: #5f7488;
+  --line-soft: rgba(19, 33, 47, 0.14);
+  --canvas-top: #f7f4eb;
+  --canvas-bottom: #eef3f7;
+  --surface: rgba(255, 255, 255, 0.88);
+  --surface-strong: #ffffff;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --shadow-soft: 0 18px 40px rgba(20, 38, 56, 0.08);
+  --shadow-focus: 0 0 0 3px rgba(0, 122, 61, 0.22);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--canvas-top);
+}
+
+body {
+  margin: 0;
+  color: var(--ink-900);
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  line-height: 1.65;
+  background:
+    radial-gradient(circle at 8% -8%, rgba(200, 16, 46, 0.14), transparent 38%),
+    radial-gradient(circle at 92% 14%, rgba(0, 122, 61, 0.14), transparent 34%),
+    linear-gradient(180deg, var(--canvas-top), var(--canvas-bottom));
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 0.01em;
+  margin: 0;
+  line-height: 1.12;
+  color: var(--ink-900);
+}
+
+p {
+  margin: 0;
+  color: var(--ink-700);
+}
+
+.container {
+  width: min(1180px, calc(100% - 2.5rem));
+  margin-inline: auto;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(3.6rem, 6vw, 5.4rem) 0;
+  color: #f9fbfd;
+  background:
+    linear-gradient(116deg, #122534 10%, #1e3649 52%, #0f4532 100%);
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.16);
+}
+
+.page-hero::before,
+.page-hero::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.page-hero::before {
+  width: 26rem;
+  height: 26rem;
+  right: -8rem;
+  top: -10rem;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 62%);
+}
+
+.page-hero::after {
+  width: 16rem;
+  height: 16rem;
+  left: -5rem;
+  bottom: -6rem;
+  background: radial-gradient(circle, rgba(200, 16, 46, 0.38), transparent 62%);
+}
+
+.page-hero .container {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0.9rem;
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  color: #f9fbfd;
+  text-wrap: balance;
+}
+
+.page-hero p {
+  font-size: clamp(1rem, 2.2vw, 1.35rem);
+  color: rgba(249, 251, 253, 0.86);
+  max-width: 56rem;
+  margin-inline: auto;
+}
+
+section {
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: clamp(1.8rem, 4vw, 3rem);
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--ink-900);
+  margin-bottom: 0.75rem;
+  text-wrap: balance;
+}
+
+.divider {
+  width: 76px;
+  height: 4px;
+  margin-inline: auto;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--oman-red), var(--oman-gold), var(--oman-green));
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.9rem 1.55rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-primary {
+  color: #ffffff;
+  background: linear-gradient(125deg, #018a47, #006933);
+  box-shadow: 0 14px 26px rgba(0, 122, 61, 0.26);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 28px rgba(0, 122, 61, 0.32);
+}
+
+.btn-secondary {
+  color: var(--ink-900);
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(8px);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.86);
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+@keyframes rise-fade {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-header,
+.link-card,
+.service-card,
+.objective-card,
+.relations-card,
+.info-card,
+.hours-card,
+.investment-card,
+.message-card,
+.contact-form-container,
+.map-placeholder {
+  animation: rise-fade 0.7s ease both;
+}
+
+.links-grid .link-card:nth-child(2),
+.services-grid .service-card:nth-child(2),
+.objectives-grid .objective-card:nth-child(2),
+.relations-content .relations-card:nth-child(2),
+.contact-info .info-card:nth-child(2) {
+  animation-delay: 0.08s;
+}
+
+.links-grid .link-card:nth-child(3),
+.services-grid .service-card:nth-child(3),
+.objectives-grid .objective-card:nth-child(3),
+.relations-content .relations-card:nth-child(3),
+.contact-info .info-card:nth-child(3) {
+  animation-delay: 0.16s;
+}
+
+.links-grid .link-card:nth-child(4),
+.services-grid .service-card:nth-child(4),
+.objectives-grid .objective-card:nth-child(4),
+.contact-info .info-card:nth-child(4) {
+  animation-delay: 0.24s;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: linear-gradient(var(--oman-red), var(--oman-green));
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(19, 33, 47, 0.08);
+}
+
+html[dir='rtl'] body {
+  direction: rtl;
+  font-family: 'Noto Naskh Arabic', 'Manrope', sans-serif;
+}
+
+html[dir='rtl'] .btn-primary,
+html[dir='rtl'] .btn-secondary {
+  letter-spacing: normal;
+}
+
+html[dir='rtl'] input,
+html[dir='rtl'] textarea,
+html[dir='rtl'] select {
+  text-align: right;
+}
+
+@media (max-width: 992px) {
+  .container {
+    width: min(1180px, calc(100% - 1.8rem));
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: min(1180px, calc(100% - 1.2rem));
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    max-width: 320px;
+  }
+}

@@ -8,11 +8,11 @@ import { MissionsComponent } from './pages/missions/missions.component';
 import { ContactComponent } from './pages/contact/contact.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent, title: 'Consulat du Sultanat d\'Oman - Accueil' },
-  { path: 'consulat', component: ConsulateComponent, title: 'Le Consulat' },
-  { path: 'services', component: ServicesComponent, title: 'Services consulaires' },
-  { path: 'missions', component: MissionsComponent, title: 'Objectifs et missions' },
-  { path: 'contact', component: ContactComponent, title: 'Contact' },
+  { path: '', component: HomeComponent, title: 'route.home' },
+  { path: 'consulat', component: ConsulateComponent, title: 'route.consulate' },
+  { path: 'services', component: ServicesComponent, title: 'route.services' },
+  { path: 'missions', component: MissionsComponent, title: 'route.missions' },
+  { path: 'contact', component: ContactComponent, title: 'route.contact' },
   { path: '**', redirectTo: '' }
 ];
 

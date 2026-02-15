@@ -1,60 +1,59 @@
-<main class="main-content">
-  <!-- Hero Section -->
+﻿<main class="main-content">
   <section class="hero">
     <div class="hero-background">
-      <app-image-carousel 
-        [images]="heroImages" 
-        [autoPlay]="true" 
-        [interval]="4000" 
-        [showCaptions]="false" 
+      <app-image-carousel
+        [images]="heroImages"
+        [autoPlay]="true"
+        [interval]="4000"
+        [showCaptions]="false"
         [height]="'100%'"
-        class="hero-background-carousel">
+        class="hero-background-carousel"
+      >
       </app-image-carousel>
       <div class="hero-overlay"></div>
     </div>
     <div class="container">
       <div class="hero-content">
         <div class="hero-text">
-          <h1 class="hero-title">Bienvenue au Consulat du Sultanat d'Oman</h1>
-          <p class="hero-subtitle">Service, Diplomatie et Excellence</p>
+          <h1 class="hero-title">{{ 'home.hero.title' | i18n }}</h1>
+          <p class="hero-subtitle">{{ 'home.hero.subtitle' | i18n }}</p>
           <div class="hero-actions">
-            <a href="/services" class="btn-primary">Services consulaires</a>
-            <a href="/contact" class="btn-secondary">Contactez-nous</a>
+            <a routerLink="/services" class="btn-primary">{{ 'home.hero.servicesCta' | i18n }}</a>
+            <a routerLink="/contact" class="btn-secondary">{{ 'home.hero.contactCta' | i18n }}</a>
           </div>
         </div>
         <div class="hero-flags">
-          <img src="assets/images/oman-flag.png" alt="Drapeau du Sultanat d'Oman" class="flag flag-oman">
-          <img src="assets/images/drapeau-cote-d-ivoire.jpg" alt="Drapeau de Côte d'Ivoire" class="flag flag-ivory-coast">
+          <img src="assets/images/oman-flag.png" [alt]="'header.flags.omanAlt' | i18n" class="flag flag-oman">
+          <img src="assets/images/drapeau-cote-d-ivoire.jpg" [alt]="'header.flags.ivoryCoastAlt' | i18n" class="flag flag-ivory-coast">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Message du Chef de Mission -->
   <section class="message-section">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Message du Chef de Mission</h2>
+        <h2 class="section-title">{{ 'home.message.sectionTitle' | i18n }}</h2>
         <div class="divider"></div>
       </div>
-      
+
       <div class="message-content">
         <div class="message-card">
           <div class="message-avatar">
-            <img src="assets/images/David-Billon.webp" alt="M. David Billon, Consul du Sultanat d'Oman" class="consul-photo-large">
+            <img src="assets/images/David-Billon.webp" [alt]="'home.message.photoAlt' | i18n" class="consul-photo-large">
           </div>
           <div class="message-text">
             <blockquote>
-              Cher visiteur,<br><br>
-              J'ai le plaisir de vous souhaiter la bienvenue sur le site officiel du Consulat du Sultanat d'Oman en République de Côte d'Ivoire, basé à Abidjan.<br><br>
-              Le Consulat du Sultanat d'Oman œuvre, en étroite collaboration avec le Ministère des Affaires étrangères, au renforcement des relations de coopération et à la consolidation des liens d'amitié entre le Sultanat d'Oman et la République de Côte d'Ivoire.<br><br>
-              Ce site a pour vocation de fournir des informations sur les relations bilatérales entre nos deux pays, de faciliter la communication avec le Consulat et de présenter les services consulaires mis à la disposition du public.<br><br>
-              Nous sommes honorés de vous servir et vous souhaitons une excellente visite.
+              <p>{{ 'home.message.greeting' | i18n }}</p>
+              <p>{{ 'home.message.paragraph1' | i18n }}</p>
+              <p>{{ 'home.message.paragraph2' | i18n }}</p>
+              <p>{{ 'home.message.paragraph3' | i18n }}</p>
+              <p>{{ 'home.message.paragraph4' | i18n }}</p>
             </blockquote>
             <div class="message-author">
-              <strong>M. David Billon</strong><br>
-              <span>Consul du Sultanat d'Oman</span><br>
-              <span>République de Côte d'Ivoire – Abidjan</span>
+              <strong>{{ 'home.message.authorName' | i18n }}</strong><br>
+              <span>{{ 'home.message.authorRole' | i18n }}</span><br>
+              <span>{{ 'home.message.authorLocation' | i18n }}</span>
             </div>
           </div>
         </div>
@@ -62,37 +61,36 @@
     </div>
   </section>
 
-  <!-- Quick Links -->
   <section class="quick-links">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Services Consulaires</h2>
+        <h2 class="section-title">{{ 'home.services.sectionTitle' | i18n }}</h2>
         <div class="divider"></div>
       </div>
-      
+
       <div class="links-grid">
-        <a href="/services" class="link-card">
+        <a routerLink="/services" class="link-card">
           <div class="card-icon visa"></div>
-          <h3>Demande de visa</h3>
-          <p>Procédure et documents nécessaires pour obtenir un visa pour le Sultanat d'Oman</p>
+          <h3>{{ 'home.services.cards.visa.title' | i18n }}</h3>
+          <p>{{ 'home.services.cards.visa.description' | i18n }}</p>
         </a>
-        
-        <a href="/services" class="link-card">
+
+        <a routerLink="/services" class="link-card">
           <div class="card-icon passport"></div>
-          <h3>Perte de passeport</h3>
-          <p>Assistance et démarches en cas de perte ou de vol de passeport</p>
+          <h3>{{ 'home.services.cards.passport.title' | i18n }}</h3>
+          <p>{{ 'home.services.cards.passport.description' | i18n }}</p>
         </a>
-        
-        <a href="/services" class="link-card">
+
+        <a routerLink="/services" class="link-card">
           <div class="card-icon assistance"></div>
-          <h3>Assistance d'urgence</h3>
-          <p>Aide consulaire pour les citoyens omanais en difficulté</p>
+          <h3>{{ 'home.services.cards.emergency.title' | i18n }}</h3>
+          <p>{{ 'home.services.cards.emergency.description' | i18n }}</p>
         </a>
-        
-        <a href="/missions" class="link-card">
+
+        <a routerLink="/missions" class="link-card">
           <div class="card-icon business"></div>
-          <h3>Opportunités d'affaires</h3>
-          <p>Informations sur les opportunités d'investissement au Sultanat d'Oman</p>
+          <h3>{{ 'home.services.cards.business.title' | i18n }}</h3>
+          <p>{{ 'home.services.cards.business.description' | i18n }}</p>
         </a>
       </div>
     </div>

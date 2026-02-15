@@ -1,89 +1,85 @@
-<main class="main-content">
+﻿<main class="main-content">
   <section class="page-hero">
     <div class="container">
-      <h1>Services consulaires</h1>
-      <p>Votre service, notre priorité</p>
+      <h1>{{ 'services.hero.title' | i18n }}</h1>
+      <p>{{ 'services.hero.subtitle' | i18n }}</p>
     </div>
   </section>
 
   <section class="services-section">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Nos Services consulaires</h2>
+        <h2 class="section-title">{{ 'services.sectionTitle' | i18n }}</h2>
         <div class="divider"></div>
       </div>
-      
+
       <div class="services-grid">
         <div class="service-card">
           <div class="service-image">
-            <img src="assets/images/david_BILLON.png" alt="Demande de visa">
+            <img src="assets/images/david_BILLON.png" [alt]="'services.cards.visa.imageAlt' | i18n">
           </div>
-          <h3>Demande de visa</h3>
-          <p>Procédure simplifiée pour l'obtention de visas pour le Sultanat d'Oman</p>
+          <h3>{{ 'services.cards.visa.title' | i18n }}</h3>
+          <p>{{ 'services.cards.visa.description' | i18n }}</p>
           <ul class="requirements-list">
-            <li>Passeport valide (6 mois minimum)</li>
-            <li>Formulaire de demande dûment rempli</li>
-            <li>Photo d'identité récente</li>
-            <li>Justificatif de voyage</li>
-            <li>Preuve de solvabilité</li>
+            <li>{{ 'services.cards.visa.requirements.one' | i18n }}</li>
+            <li>{{ 'services.cards.visa.requirements.two' | i18n }}</li>
+            <li>{{ 'services.cards.visa.requirements.three' | i18n }}</li>
+            <li>{{ 'services.cards.visa.requirements.four' | i18n }}</li>
+            <li>{{ 'services.cards.visa.requirements.five' | i18n }}</li>
           </ul>
           <div class="service-actions">
-            <a href="https://www.fm.gov.om/en/visitors/entry-visas/" target="_blank" rel="noopener noreferrer" class="btn-primary">Demander un visa</a>
-            <!-- <a href="https://www.fm.gov.om/en/missions/om-sn-dakar-em/" class="btn-secondary">Plus d'informations</a> -->
+            <a href="https://www.fm.gov.om/en/visitors/entry-visas/" target="_blank" rel="noopener noreferrer" class="btn-primary">{{ 'services.cards.visa.button' | i18n }}</a>
           </div>
         </div>
-        
+
         <div class="service-card">
           <div class="service-image">
-            <img src="assets/images/billon_consul2.jpg" alt="Perte de passeport">
+            <img src="assets/images/billon_consul2.jpg" [alt]="'services.cards.passport.imageAlt' | i18n">
           </div>
-          <h3>Perte de passeport</h3>
-          <p>Assistance et démarches en cas de perte ou de vol de passeport</p>
+          <h3>{{ 'services.cards.passport.title' | i18n }}</h3>
+          <p>{{ 'services.cards.passport.description' | i18n }}</p>
           <ul class="requirements-list">
-            <li>Déclaration de perte ou de vol</li>
-            <li>Photo d'identité</li>
-            <li>Preuve d'identité</li>
-            <li>Justificatif de séjour</li>
+            <li>{{ 'services.cards.passport.requirements.one' | i18n }}</li>
+            <li>{{ 'services.cards.passport.requirements.two' | i18n }}</li>
+            <li>{{ 'services.cards.passport.requirements.three' | i18n }}</li>
+            <li>{{ 'services.cards.passport.requirements.four' | i18n }}</li>
           </ul>
           <div class="service-actions">
-            <a href="https://www.fm.gov.om/en/citizens/passport-problems/" target="_blank" rel="noopener noreferrer" class="btn-primary">Assistance d'urgence</a>
-            <!-- <a href="#" class="btn-secondary">Contactez-nous</a> -->
+            <a href="https://www.fm.gov.om/en/citizens/passport-problems/" target="_blank" rel="noopener noreferrer" class="btn-primary">{{ 'services.cards.passport.button' | i18n }}</a>
           </div>
         </div>
-        
+
         <div class="service-card">
           <div class="service-image">
-            <img src="assets/images/billon_consul1.jpg" alt="Assistance d'urgence">
+            <img src="assets/images/billon_consul1.jpg" [alt]="'services.cards.emergency.imageAlt' | i18n">
           </div>
-          <h3>Assistance d'urgence</h3>
-          <p>Aide consulaire pour les citoyens omanais en difficulté</p>
+          <h3>{{ 'services.cards.emergency.title' | i18n }}</h3>
+          <p>{{ 'services.cards.emergency.description' | i18n }}</p>
           <ul class="requirements-list">
-            <li>Assistance 24h/24 et 7j/7</li>
-            <li>Conseil et orientation</li>
-            <li>Coordination avec les autorités locales</li>
-            <li>Aide aux rapatriements</li>
+            <li>{{ 'services.cards.emergency.requirements.one' | i18n }}</li>
+            <li>{{ 'services.cards.emergency.requirements.two' | i18n }}</li>
+            <li>{{ 'services.cards.emergency.requirements.three' | i18n }}</li>
+            <li>{{ 'services.cards.emergency.requirements.four' | i18n }}</li>
           </ul>
           <div class="service-actions">
-            <a href="https://www.fm.gov.om/en/citizens/consular-services/" target="_blank" rel="noopener noreferrer" class="btn-primary">Urgence</a>
-            <!-- <a href="#" class="btn-secondary">En savoir plus</a> -->
+            <a href="https://www.fm.gov.om/en/citizens/consular-services/" target="_blank" rel="noopener noreferrer" class="btn-primary">{{ 'services.cards.emergency.button' | i18n }}</a>
           </div>
         </div>
-        
+
         <div class="service-card">
           <div class="service-image">
-            <img src="assets/images/vue_Oman2.jpg" alt="Opportunités d'affaires">
+            <img src="assets/images/vue_Oman2.jpg" [alt]="'services.cards.business.imageAlt' | i18n">
           </div>
-          <h3>Opportunités d'affaires</h3>
-          <p>Informations sur les opportunités d'investissement au Sultanat d'Oman</p>
+          <h3>{{ 'services.cards.business.title' | i18n }}</h3>
+          <p>{{ 'services.cards.business.description' | i18n }}</p>
           <ul class="requirements-list">
-            <li>Guide des investissements</li>
-            <li>Informations sectorielles</li>
-            <li>Contact avec les autorités omanaises</li>
-            <li>Assistance administrative</li>
+            <li>{{ 'services.cards.business.requirements.one' | i18n }}</li>
+            <li>{{ 'services.cards.business.requirements.two' | i18n }}</li>
+            <li>{{ 'services.cards.business.requirements.three' | i18n }}</li>
+            <li>{{ 'services.cards.business.requirements.four' | i18n }}</li>
           </ul>
           <div class="service-actions">
-            <a href="https://www.fm.gov.om/en/trade/opportunities-for-trade/" target="_blank" rel="noopener noreferrer" class="btn-primary">Explorer les opportunités</a>
-            <!-- <a href="#" class="btn-secondary">Documentation</a> -->
+            <a href="https://www.fm.gov.om/en/trade/opportunities-for-trade/" target="_blank" rel="noopener noreferrer" class="btn-primary">{{ 'services.cards.business.button' | i18n }}</a>
           </div>
         </div>
       </div>
@@ -93,35 +89,35 @@
   <section class="hours-section">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Horaires d'ouverture</h2>
+        <h2 class="section-title">{{ 'services.hours.sectionTitle' | i18n }}</h2>
         <div class="divider"></div>
       </div>
-      
+
       <div class="hours-content">
         <div class="hours-card">
-          <h3>Consulat du Sultanat d'Oman</h3>
+          <h3>{{ 'services.hours.consulateTitle' | i18n }}</h3>
           <div class="hours-info">
-            <p><strong>Adresse:</strong> Abidjan, Côte d'Ivoire</p>
-            <p><strong>Téléphone:</strong> +225 XX XX XX XX</p>
-            <p><strong>Email:</strong> consulat@oman.ci</p>
+            <p><strong>{{ 'services.hours.addressLabel' | i18n }}</strong> {{ 'footer.location' | i18n }}</p>
+            <p><strong>{{ 'services.hours.phoneLabel' | i18n }}</strong> +225 XX XX XX XX</p>
+            <p><strong>{{ 'services.hours.emailLabel' | i18n }}</strong> consulat@oman.ci</p>
           </div>
-          
+
           <div class="opening-hours">
-            <h4>Horaires d'ouverture:</h4>
+            <h4>{{ 'services.hours.openingTitle' | i18n }}</h4>
             <ul>
-              <li>Lundi: 08h00 - 16h00</li>
-              <li>Mardi: 08h00 - 16h00</li>
-              <li>Mercredi: 08h00 - 16h00</li>
-              <li>Jeudi: 08h00 - 16h00</li>
-              <li>Vendredi: 08h00 - 14h00</li>
-              <li>Samedi: Fermé</li>
-              <li>Dimanche: Fermé</li>
+              <li>{{ 'services.hours.schedule.monday' | i18n }}</li>
+              <li>{{ 'services.hours.schedule.tuesday' | i18n }}</li>
+              <li>{{ 'services.hours.schedule.wednesday' | i18n }}</li>
+              <li>{{ 'services.hours.schedule.thursday' | i18n }}</li>
+              <li>{{ 'services.hours.schedule.friday' | i18n }}</li>
+              <li>{{ 'services.hours.schedule.saturday' | i18n }}</li>
+              <li>{{ 'services.hours.schedule.sunday' | i18n }}</li>
             </ul>
           </div>
-          
+
           <div class="notice">
-            <p><strong>Note:</strong> Les demandes de visa nécessitent un rendez-vous préalable.</p>
-            <p>Pour les urgences consulaires, un service est disponible 24h/24.</p>
+            <p><strong>{{ 'services.hours.noticeTitle' | i18n }}</strong> {{ 'services.hours.noticeLine1' | i18n }}</p>
+            <p>{{ 'services.hours.noticeLine2' | i18n }}</p>
           </div>
         </div>
       </div>

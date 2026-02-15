@@ -1,44 +1,53 @@
-<main class="main-content">
+﻿<main class="main-content">
   <section class="page-hero">
     <div class="container">
-      <h1>Le Consulat</h1>
-      <p>Service et excellence au service des relations Oman - Côte d'Ivoire</p>
+      <h1>{{ 'consulate.hero.title' | i18n }}</h1>
+      <p>{{ 'consulate.hero.subtitle' | i18n }}</p>
     </div>
   </section>
 
   <section class="content-section">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Présentation du Consulat</h2>
+        <h2 class="section-title">{{ 'consulate.presentation.sectionTitle' | i18n }}</h2>
         <div class="divider"></div>
       </div>
-      
+
       <div class="content-grid">
         <div class="content-text">
-          <h3>Notre Mission</h3>
-          <p>
-            Le Consulat du Sultanat d'Oman à Abidjan a pour mission de représenter les intérêts du Sultanat d'Oman 
-            en République de Côte d'Ivoire et de servir la communauté omanaise résidant dans le pays. Nous œuvrons 
-            quotidiennement au renforcement des relations bilatérales entre nos deux nations.
-          </p>
-          
-          <h3>Nos Valeurs</h3>
+          <h3>{{ 'consulate.presentation.missionTitle' | i18n }}</h3>
+          <p>{{ 'consulate.presentation.missionBody' | i18n }}</p>
+
+          <h3>{{ 'consulate.presentation.valuesTitle' | i18n }}</h3>
           <ul class="values-list">
-            <li><strong>Excellence:</strong> Un service de qualité répondant aux standards internationaux</li>
-            <li><strong>Intégrité:</strong> Transparence et honnêteté dans toutes nos démarches</li>
-            <li><strong>Respect:</strong> Valorisation des relations humaines et culturelles</li>
-            <li><strong>Professionalisme:</strong> Compétence et dévouement au service du public</li>
+            <li>
+              <strong>{{ 'consulate.presentation.values.excellenceLabel' | i18n }}:</strong>
+              {{ 'consulate.presentation.values.excellenceDescription' | i18n }}
+            </li>
+            <li>
+              <strong>{{ 'consulate.presentation.values.integrityLabel' | i18n }}:</strong>
+              {{ 'consulate.presentation.values.integrityDescription' | i18n }}
+            </li>
+            <li>
+              <strong>{{ 'consulate.presentation.values.respectLabel' | i18n }}:</strong>
+              {{ 'consulate.presentation.values.respectDescription' | i18n }}
+            </li>
+            <li>
+              <strong>{{ 'consulate.presentation.values.professionalismLabel' | i18n }}:</strong>
+              {{ 'consulate.presentation.values.professionalismDescription' | i18n }}
+            </li>
           </ul>
         </div>
-        
+
         <div class="content-image">
-          <app-image-carousel 
-            [images]="consulateImages" 
-            [autoPlay]="true" 
-            [interval]="6000" 
-            [showCaptions]="true" 
+          <app-image-carousel
+            [images]="consulateImages"
+            [autoPlay]="true"
+            [interval]="6000"
+            [showCaptions]="true"
             [height]="'300px'"
-            class="consulate-carousel">
+            class="consulate-carousel"
+          >
           </app-image-carousel>
         </div>
       </div>
@@ -48,60 +57,47 @@
   <section class="relations-section">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Relations bilatérales Oman – Côte d'Ivoire</h2>
+        <h2 class="section-title">{{ 'consulate.relations.sectionTitle' | i18n }}</h2>
         <div class="divider"></div>
       </div>
-      
+
       <div class="relations-content">
         <div class="relations-card">
           <div class="card-header">
             <div class="flag-pair">
-              <img src="assets/images/oman-flag.png" alt="Drapeau d'Oman" class="flag">
-              <img src="assets/images/drapeau-cote-d-ivoire.jpg" alt="Drapeau de Côte d'Ivoire" class="flag">
+              <img src="assets/images/oman-flag.png" [alt]="'consulate.relations.flags.omanAlt' | i18n" class="flag">
+              <img src="assets/images/drapeau-cote-d-ivoire.jpg" [alt]="'consulate.relations.flags.ivoryCoastAlt' | i18n" class="flag">
             </div>
-            <h3>Coopération politique</h3>
+            <h3>{{ 'consulate.relations.political.title' | i18n }}</h3>
           </div>
           <div class="card-content">
-            <p>
-              Les relations diplomatiques entre le Sultanat d'Oman et la République de Côte d'Ivoire 
-              reposent sur des principes de respect mutuel, de souveraineté et de non-ingérence dans 
-              les affaires intérieures. Nos deux pays entretiennent un dialogue politique régulier 
-              et constructif.
-            </p>
+            <p>{{ 'consulate.relations.political.body' | i18n }}</p>
           </div>
         </div>
-        
+
         <div class="relations-card">
           <div class="card-header">
             <div class="flag-pair">
-              <img src="assets/images/oman-flag.png" alt="Drapeau d'Oman" class="flag">
-              <img src="assets/images/drapeau-cote-d-ivoire.jpg" alt="Drapeau de Côte d'Ivoire" class="flag">
+              <img src="assets/images/oman-flag.png" [alt]="'consulate.relations.flags.omanAlt' | i18n" class="flag">
+              <img src="assets/images/drapeau-cote-d-ivoire.jpg" [alt]="'consulate.relations.flags.ivoryCoastAlt' | i18n" class="flag">
             </div>
-            <h3>Coopération économique</h3>
+            <h3>{{ 'consulate.relations.economic.title' | i18n }}</h3>
           </div>
           <div class="card-content">
-            <p>
-              Le Sultanat d'Oman et la Côte d'Ivoire développent activement leurs échanges économiques 
-              et commerciaux. Des opportunités d'investissement mutuel existent dans les secteurs 
-              de l'agriculture, de l'énergie, du tourisme et des infrastructures.
-            </p>
+            <p>{{ 'consulate.relations.economic.body' | i18n }}</p>
           </div>
         </div>
-        
+
         <div class="relations-card">
           <div class="card-header">
             <div class="flag-pair">
-              <img src="assets/images/oman-flag.png" alt="Drapeau d'Oman" class="flag">
-              <img src="assets/images/drapeau-cote-d-ivoire.jpg" alt="Drapeau de Côte d'Ivoire" class="flag">
+              <img src="assets/images/oman-flag.png" [alt]="'consulate.relations.flags.omanAlt' | i18n" class="flag">
+              <img src="assets/images/drapeau-cote-d-ivoire.jpg" [alt]="'consulate.relations.flags.ivoryCoastAlt' | i18n" class="flag">
             </div>
-            <h3>Coopération culturelle</h3>
+            <h3>{{ 'consulate.relations.cultural.title' | i18n }}</h3>
           </div>
           <div class="card-content">
-            <p>
-              Nos deux pays partagent une riche histoire et des traditions séculaires. La coopération 
-              culturelle se manifeste à travers des échanges artistiques, éducatifs et universitaires 
-              qui renforcent les liens entre nos peuples.
-            </p>
+            <p>{{ 'consulate.relations.cultural.body' | i18n }}</p>
           </div>
         </div>
       </div>

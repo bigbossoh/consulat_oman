@@ -1,61 +1,61 @@
-<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+﻿<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
   <div class="form-group">
-    <label for="name">Nom et Prénom *</label>
-    <input 
-      type="text" 
-      id="name" 
+    <label for="name">{{ 'contactForm.nameLabel' | i18n }}</label>
+    <input
+      type="text"
+      id="name"
       formControlName="name"
       class="form-control"
       [class.error]="f['name'].invalid && f['name'].touched"
     >
     <div class="error-message" *ngIf="f['name'].invalid && f['name'].touched">
-      Veuillez saisir votre nom et prénom
+      {{ 'contactForm.nameError' | i18n }}
     </div>
   </div>
 
   <div class="form-group">
-    <label for="email">Adresse e-mail *</label>
-    <input 
-      type="email" 
-      id="email" 
+    <label for="email">{{ 'contactForm.emailLabel' | i18n }}</label>
+    <input
+      type="email"
+      id="email"
       formControlName="email"
       class="form-control"
       [class.error]="f['email'].invalid && f['email'].touched"
     >
     <div class="error-message" *ngIf="f['email'].invalid && f['email'].touched">
-      Veuillez saisir une adresse e-mail valide
+      {{ 'contactForm.emailError' | i18n }}
     </div>
   </div>
 
   <div class="form-group">
-    <label for="subject">Sujet *</label>
-    <input 
-      type="text" 
-      id="subject" 
+    <label for="subject">{{ 'contactForm.subjectLabel' | i18n }}</label>
+    <input
+      type="text"
+      id="subject"
       formControlName="subject"
       class="form-control"
       [class.error]="f['subject'].invalid && f['subject'].touched"
     >
     <div class="error-message" *ngIf="f['subject'].invalid && f['subject'].touched">
-      Le sujet doit contenir au moins 5 caractères
+      {{ 'contactForm.subjectError' | i18n }}
     </div>
   </div>
 
   <div class="form-group">
-    <label for="message">Message *</label>
-    <textarea 
-      id="message" 
+    <label for="message">{{ 'contactForm.messageLabel' | i18n }}</label>
+    <textarea
+      id="message"
       formControlName="message"
       rows="6"
       class="form-control"
       [class.error]="f['message'].invalid && f['message'].touched"
     ></textarea>
     <div class="error-message" *ngIf="f['message'].invalid && f['message'].touched">
-      Le message doit contenir au moins 10 caractères
+      {{ 'contactForm.messageError' | i18n }}
     </div>
   </div>
 
   <button type="submit" class="btn-submit" [disabled]="contactForm.invalid">
-    Envoyer le message
+    {{ 'contactForm.submit' | i18n }}
   </button>
 </form>

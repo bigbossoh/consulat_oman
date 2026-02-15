@@ -1,33 +1,30 @@
-<div class="carousel" [style.height]="height" (mouseenter)="stopAutoPlay()" (mouseleave)="startAutoPlay()">
-  <!-- Main Image -->
+﻿<div class="carousel" [style.height]="height" (mouseenter)="stopAutoPlay()" (mouseleave)="startAutoPlay()">
   <div class="carousel-slide">
-    <img 
-      [src]="currentImage.src" 
-      [alt]="currentImage.alt"
+    <img
+      [src]="currentImage.src"
+      [alt]="currentImage.altKey | i18n"
       class="carousel-image"
       loading="lazy"
     >
-    <div class="carousel-overlay" *ngIf="showCaptions && currentImage.caption">
-      <h3 class="carousel-caption">{{ currentImage.caption }}</h3>
+    <div class="carousel-overlay" *ngIf="showCaptions && currentImage.captionKey">
+      <h3 class="carousel-caption">{{ currentImage.captionKey | i18n }}</h3>
     </div>
   </div>
 
-  <!-- Navigation Arrows -->
-  <button class="carousel-nav carousel-nav-prev" (click)="prev()" aria-label="Image précédente">
-    ‹
+  <button class="carousel-nav carousel-nav-prev" (click)="prev()" [attr.aria-label]="'carousel.previousImage' | i18n">
+    &#8249;
   </button>
-  <button class="carousel-nav carousel-nav-next" (click)="next()" aria-label="Image suivante">
-    ›
+  <button class="carousel-nav carousel-nav-next" (click)="next()" [attr.aria-label]="'carousel.nextImage' | i18n">
+    &#8250;
   </button>
 
-  <!-- Indicators -->
   <div class="carousel-indicators">
-    <button 
-      *ngFor="let image of images; let i = index" 
-      class="indicator" 
+    <button
+      *ngFor="let image of images; let i = index"
+      class="indicator"
       [class.active]="i === currentIndex"
       (click)="goTo(i)"
-      [aria-label]="'Aller à l\'image ' + (i + 1)"
+      [attr.aria-label]="'carousel.goToImage' | i18n"
     >
     </button>
   </div>

@@ -1,13 +1,14 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { NgIf } from '@angular/common';
+import { I18nPipe } from '../../../core/i18n/i18n.pipe';
 
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.scss'],
   standalone: true,
-  imports: [ReactiveFormsModule, NgIf]
+  imports: [ReactiveFormsModule, NgIf, I18nPipe]
 })
 export class ContactFormComponent {
   @Output() formSubmit = new EventEmitter<any>();

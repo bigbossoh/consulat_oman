@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+﻿import { Component } from '@angular/core';
+import { I18nPipe } from '../../core/i18n/i18n.pipe';
 import { ImageCarouselComponent } from '../../shared/components/image-carousel/image-carousel.component';
 
 interface CarouselImage {
   src: string;
-  alt: string;
-  caption?: string;
+  altKey: string;
+  captionKey?: string;
 }
 
 @Component({
@@ -12,34 +13,34 @@ interface CarouselImage {
   templateUrl: './missions.component.html',
   styleUrls: ['./missions.component.scss'],
   standalone: true,
-  imports: [ImageCarouselComponent]
+  imports: [ImageCarouselComponent, I18nPipe]
 })
 export class MissionsComponent {
   landscapeImages: CarouselImage[] = [
     {
       src: 'assets/images/vue_Oman2.jpg',
-      alt: 'Paysage du Sultanat d\'Oman',
-      caption: 'Opportunités d\'investissement'
+      altKey: 'missions.carousel.oman2.alt',
+      captionKey: 'missions.carousel.oman2.caption'
     },
     {
       src: 'assets/images/vue_Oman3.jpg',
-      alt: 'Désert d\'Oman',
-      caption: 'Énergies renouvelables'
+      altKey: 'missions.carousel.oman3.alt',
+      captionKey: 'missions.carousel.oman3.caption'
     },
     {
       src: 'assets/images/vue_Oman4.jpg',
-      alt: 'Montagnes d\'Oman',
-      caption: 'Tourisme durable'
+      altKey: 'missions.carousel.oman4.alt',
+      captionKey: 'missions.carousel.oman4.caption'
     },
     {
       src: 'assets/images/vue_Oman5.jpeg',
-      alt: 'Côte d\'Oman',
-      caption: 'Infrastructures modernes'
+      altKey: 'missions.carousel.oman5.alt',
+      captionKey: 'missions.carousel.oman5.caption'
     },
     {
       src: 'assets/images/vue_Oman6.jpg',
-      alt: 'Développement d\'Oman',
-      caption: 'Vision 2040'
+      altKey: 'missions.carousel.oman6.alt',
+      captionKey: 'missions.carousel.oman6.caption'
     }
   ];
 }

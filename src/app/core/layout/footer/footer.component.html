@@ -1,44 +1,34 @@
-<footer class="footer">
+﻿<footer class="footer">
   <div class="container">
     <div class="footer-content">
       <div class="footer-section">
-        <h3>Consulat du Sultanat d'Oman</h3>
-        <p>République de Côte d'Ivoire - Abidjan</p>
-        <!-- <div class="flag-stripes-small">
-          <div class="stripe red"></div>
-          <div class="stripe white"></div>
-          <div class="stripe green"></div>
-        </div> -->
-         <!-- <div class="flag-stripes-small">
-          <div class="stripe orange"></div>
-          <div class="stripe white"></div>
-          <div class="stripe green"></div>
-        </div> -->
+        <h3>{{ 'footer.title' | i18n }}</h3>
+        <p>{{ 'footer.subtitle' | i18n }}</p>
       </div>
-      
+
       <div class="footer-section">
-        <h4>Liens rapides</h4>
+        <h4>{{ 'footer.quickLinks' | i18n }}</h4>
         <ul>
-          <li><a routerLink="/">Accueil</a></li>
-          <li><a routerLink="/consulat">Le Consulat</a></li>
-          <li><a routerLink="/services">Services consulaires</a></li>
-          <li><a routerLink="/missions">Missions</a></li>
-          <li><a routerLink="/contact">Contact</a></li>
+          <li><a routerLink="/">{{ 'header.nav.home' | i18n }}</a></li>
+          <li><a routerLink="/consulat">{{ 'header.nav.consulate' | i18n }}</a></li>
+          <li><a routerLink="/services">{{ 'header.nav.services' | i18n }}</a></li>
+          <li><a routerLink="/missions">{{ 'header.nav.missions' | i18n }}</a></li>
+          <li><a routerLink="/contact">{{ 'header.nav.contact' | i18n }}</a></li>
         </ul>
       </div>
-      
+
       <div class="footer-section">
-        <h4>Contact</h4>
+        <h4>{{ 'footer.contactTitle' | i18n }}</h4>
         <address>
-          <p>Abidjan, Côte d'Ivoire</p>
-          <p>Téléphone: +225 XX XX XX XX</p>
-          <p>Email: consulat@oman.ci</p>
+          <p>{{ 'footer.location' | i18n }}</p>
+          <p>{{ 'footer.phone' | i18n }}</p>
+          <p>{{ 'footer.email' | i18n }}</p>
         </address>
       </div>
     </div>
-    
+
     <div class="footer-bottom">
-      <p>&copy; {{ currentYear }} Consulat du Sultanat d'Oman. Tous droits réservés.</p>
+      <p>&copy; {{ currentYear }} {{ 'footer.copyright' | i18n }}</p>
     </div>
   </div>
 </footer>

@@ -1,41 +1,82 @@
-<header class="header">
+﻿<header class="header">
   <div class="container">
     <div class="header-content">
       <div class="brand">
         <div class="flags-container">
-          <img src="assets/images/oman-flag.png" alt="Drapeau du Sultanat d'Oman" class="flag flag-oman">
-          <img src="assets/images/drapeau-cote-d-ivoire.jpg" alt="Drapeau de Côte d'Ivoire" class="flag flag-ivory-coast">
+          <img src="assets/images/oman-flag.png" [alt]="'header.flags.omanAlt' | i18n" class="flag flag-oman">
+          <img src="assets/images/drapeau-cote-d-ivoire.jpg" [alt]="'header.flags.ivoryCoastAlt' | i18n" class="flag flag-ivory-coast">
         </div>
         <div class="brand-info">
-          <h1 class="brand-title">Consulat du Sultanat d'Oman</h1>
-          <p class="brand-subtitle">En République de Côte d'Ivoire - Abidjan</p>
+          <h1 class="brand-title">{{ 'header.brandTitle' | i18n }}</h1>
+          <p class="brand-subtitle">{{ 'header.brandSubtitle' | i18n }}</p>
         </div>
       </div>
-      
+
       <nav class="nav" [class.active]="isMenuOpen">
-        <button class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle menu">
+        <button
+          class="menu-toggle"
+          (click)="toggleMenu()"
+          [attr.aria-label]="'header.toggleMenu' | i18n"
+        >
           <span></span>
           <span></span>
           <span></span>
         </button>
-        
+
         <ul class="nav-list">
           <li class="nav-item">
-            <a routerLink="/" routerLinkActive="active" (click)="closeMenu()">Accueil</a>
+            <a routerLink="/" routerLinkActive="active" (click)="closeMenu()">{{ 'header.nav.home' | i18n }}</a>
           </li>
           <li class="nav-item">
-            <a routerLink="/consulat" routerLinkActive="active" (click)="closeMenu()">Le Consulat</a>
+            <a routerLink="/consulat" routerLinkActive="active" (click)="closeMenu()">{{ 'header.nav.consulate' | i18n }}</a>
           </li>
           <li class="nav-item">
-            <a routerLink="/services" routerLinkActive="active" (click)="closeMenu()">Services consulaires</a>
+            <a routerLink="/services" routerLinkActive="active" (click)="closeMenu()">{{ 'header.nav.services' | i18n }}</a>
           </li>
           <li class="nav-item">
-            <a routerLink="/missions" routerLinkActive="active" (click)="closeMenu()">Missions</a>
+            <a routerLink="/missions" routerLinkActive="active" (click)="closeMenu()">{{ 'header.nav.missions' | i18n }}</a>
           </li>
           <li class="nav-item">
-            <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a>
+            <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">{{ 'header.nav.contact' | i18n }}</a>
           </li>
         </ul>
+
+        <div class="language-switcher">
+          <span class="sr-only">{{ 'language.selectorLabel' | i18n }}</span>
+          <div
+            class="language-segmented"
+            role="group"
+            [attr.aria-label]="'language.selectorLabel' | i18n"
+          >
+            <button
+              type="button"
+              class="language-button"
+              [class.active]="currentLanguage === 'fr'"
+              [attr.aria-pressed]="currentLanguage === 'fr'"
+              (click)="setLanguage('fr')"
+            >
+              FR
+            </button>
+            <button
+              type="button"
+              class="language-button"
+              [class.active]="currentLanguage === 'en'"
+              [attr.aria-pressed]="currentLanguage === 'en'"
+              (click)="setLanguage('en')"
+            >
+              EN
+            </button>
+            <button
+              type="button"
+              class="language-button"
+              [class.active]="currentLanguage === 'ar'"
+              [attr.aria-pressed]="currentLanguage === 'ar'"
+              (click)="setLanguage('ar')"
+            >
+              AR
+            </button>
+          </div>
+        </div>
       </nav>
     </div>
   </div>

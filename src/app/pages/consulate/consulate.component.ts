@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+﻿import { Component } from '@angular/core';
+import { I18nPipe } from '../../core/i18n/i18n.pipe';
 import { ImageCarouselComponent } from '../../shared/components/image-carousel/image-carousel.component';
 
 interface CarouselImage {
   src: string;
-  alt: string;
-  caption?: string;
+  altKey: string;
+  captionKey?: string;
 }
 
 @Component({
@@ -12,34 +13,34 @@ interface CarouselImage {
   templateUrl: './consulate.component.html',
   styleUrls: ['./consulate.component.scss'],
   standalone: true,
-  imports: [ImageCarouselComponent]
+  imports: [ImageCarouselComponent, I18nPipe]
 })
 export class ConsulateComponent {
   consulateImages: CarouselImage[] = [
     {
       src: 'assets/images/billon_consul1.jpg',
-      alt: 'Consulat du Sultanat d\'Oman',
-      caption: 'Nos locaux consulaires'
+      altKey: 'consulate.carousel.billon1.alt',
+      captionKey: 'consulate.carousel.billon1.caption'
     },
     {
       src: 'assets/images/billon_consul2.jpg',
-      alt: 'Activités consulaires',
-      caption: 'Services aux ressortissants'
+      altKey: 'consulate.carousel.billon2.alt',
+      captionKey: 'consulate.carousel.billon2.caption'
     },
     {
       src: 'assets/images/billon_consul3.jpeg',
-      alt: 'Rencontres diplomatiques',
-      caption: 'Coopération bilatérale'
+      altKey: 'consulate.carousel.billon3.alt',
+      captionKey: 'consulate.carousel.billon3.caption'
     },
     {
-      src: 'assets/images/vue_abidjan3.jpg',
-      alt: 'Ville d\'Abidjan',
-      caption: 'Notre belle ville'
+      src: 'assets/images/vue-abidjan3.jpg',
+      altKey: 'consulate.carousel.abidjan3.alt',
+      captionKey: 'consulate.carousel.abidjan3.caption'
     },
     {
-      src: 'assets/images/vue_abidjan4.jpg',
-      alt: 'Paysage d\'Abidjan',
-      caption: 'Horizons d\'avenir'
+      src: 'assets/images/vue-abidjan4.jpg',
+      altKey: 'consulate.carousel.abidjan4.alt',
+      captionKey: 'consulate.carousel.abidjan4.caption'
     }
   ];
 }

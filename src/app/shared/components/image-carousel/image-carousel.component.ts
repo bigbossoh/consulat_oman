@@ -1,10 +1,11 @@
 import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { I18nPipe } from '../../../core/i18n/i18n.pipe';
 
 interface CarouselImage {
   src: string;
-  alt: string;
-  caption?: string;
+  altKey: string;
+  captionKey?: string;
 }
 
 @Component({
@@ -12,7 +13,7 @@ interface CarouselImage {
   templateUrl: './image-carousel.component.html',
   styleUrls: ['./image-carousel.component.scss'],
   standalone: true,
-  imports: [CommonModule]
+  imports: [CommonModule, I18nPipe]
 })
 export class ImageCarouselComponent implements OnInit, OnDestroy {
   @Input() images: CarouselImage[] = [];
